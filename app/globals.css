@@ -14,57 +14,16 @@ a {
   padding: 0;
   box-sizing: border-box;
 }
-header,main{
+body{
+  background-color: #f4f6f8
+}
+main{
   display: flex;
   align-items:center;
   width: 100%;
   position: relative;
   padding: 0 10% 0 10%;
 }
-header{
-    height: 7.5rem;
-}
 
-/* Untuk tampilan desktop */
-@media (min-width: 1024px) {
-    .bg-svg {
-        background-image: url('./assets/desktop/bg-pattern-header.svg');
-        background-size: cover; /* Atur ukuran latar belakang */
-        height: 10rem; /* Atur ketinggian */
-        width: 100%;
-        position: absolute;
-        top:0;
-        left: 0;
-        background-repeat: no-repeat;
-    }
-}
 
-/* Untuk tampilan tablet */
-@media (max-width: 1023px) and (min-width: 768px) {
-    .bg-svg {
-        background-image: url('./assets/tablet/bg-pattern-header .svg');
-        background-size: cover; /* Atur ukuran latar belakang */
-        height: 10rem; /* Atur ketinggian */
-        width: 100%;
-        position: absolute;
-        top:0;
-        left: 0;
-        background-repeat: no-repeat;
-    }
-}
-
-/* Untuk tampilan ponsel */
-@media (max-width: 767px) {
-    .bg-svg {
-        background-image: url('./assets/mobile/bg-pattern-header.svg');
-        background-size: cover; /* Atur ukuran latar belakang */
-        height: 10rem; /* Atur ketinggian */
-        width: 100%;
-        position: absolute;
-        top:0;
-        left: 0;
-        background-repeat: no-repeat;
-        
-    }
-}
 
