@@ -1,8 +1,8 @@
 import Styles from './Card.module.css'
 
-const Card = ({ company,logo,logoBackground,position,postedAt,contract,location}) => {
+const Card = ({ onHandleClick,company,logo,logoBackground,position,postedAt,contract,location}) => {
   return(
-    <div className={Styles.container}>
+    <div className={Styles.container} onClick={onHandleClick}>
       <div className={Styles.logoContainer} style={{backgroundColor: logoBackground}}>
         <img src={logo} alt={`${company} logo`} />
       </div>

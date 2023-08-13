@@ -1,0 +1,45 @@
+.container{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+
+}
+.formGroup{
+  width: 100%;
+  padding: 10px 30px;
+  display: flex;
+  justify-content:space-evenly;
+  align-items:center;
+}
+.formGroup input{
+  margin: 5px;
+}
+.formGroup input[type="text"]{
+  border: none;
+  width: 90%;
+  padding: 15px;
+}
+.formGroup input[type="text"]:focus{
+  border: none;
+  outline: none;
+}
+.formGroup input[type="checkbox"] {
+  transform: scale(1.5)
+}
+.formGroup label{
+  cursor: pointer;
+}
+.formGroup button{
+  padding: 15px 50px;
+  background-color:#5964E0;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+.fullTime label{
+  margin-left: 10px;
+}

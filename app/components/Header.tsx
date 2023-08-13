@@ -6,7 +6,9 @@ const Header = () => {
     <>
       <div className={Styles.background}></div>
       <header className={Styles.header}>
-        <Link href='/'>devjobs</Link>
+        <Link href='/'>
+          <img src='/logos/logo.svg' alt="logo" />
+        </Link>
       </header>
     </>
   )

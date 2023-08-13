@@ -26,6 +26,9 @@ main{
   position: relative;
   padding: 0 10% 0 10%;
 }
+section{
+  width: 100%;
+}
 
 
 
