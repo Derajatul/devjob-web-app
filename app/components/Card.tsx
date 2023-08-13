@@ -1,8 +1,9 @@
 import Styles from './Card.module.css'
+import Link from 'next/link'
 
-const Card = ({ onHandleClick,company,logo,logoBackground,position,postedAt,contract,location}) => {
+const Card = ({ onHref,company,logo,logoBackground,position,postedAt,contract,location}) => {
   return(
-    <div className={Styles.container} onClick={onHandleClick}>
+    <Link href={onHref ? onHref : '/'} className={Styles.container}>
       <div className={Styles.logoContainer} style={{backgroundColor: logoBackground}}>
         <img src={logo} alt={`${company} logo`} />
       </div>
@@ -14,7 +15,7 @@ const Card = ({ onHandleClick,company,logo,logoBackground,position,postedAt,cont
       <h3>{position}</h3>
       <p>{company}</p>
       <h4>{location}</h4>
-    </div>
+    </Link>
   )
 }
 
