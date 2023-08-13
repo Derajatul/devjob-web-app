@@ -1,47 +1,43 @@
 import data from '../data.json';
-import {useEffect} from 'react'
-const Detail = ({
-  params,
-  postedAt,
-  contract,
-  position,
-  location,
-  description,
-  requirements,
-  role
-}) => {
+import Link from 'next/link'
+import Styles from './page.module.css'
+
+const Detail = ({ params }) => {
    const filteredData = data.filter(el => el.id == params.id);
   const detailData = filteredData[0]
   return(
-    <div>
-      <div>
+    <>
+      <section className={Styles.container}>
+      <Link href='/'>&larr; Back to home</Link>
+      <div className={Styles.jobPostingInfo}>
         <p>{detailData.postedAt}</p>
-        <span></span>
+        <span className={Styles.divider}></span>
         <p>{detailData.contract}</p>
       </div>
-      <div>
+      <div className={Styles.jobDetails}>
         <div>
-          <h3>{detailData.position}</h3>
+          <h1>{detailData.position}</h1>
           <h4>{detailData.location}</h4>
         </div>
-        <button>Apply Now</button>
+        <Link href={detailData.apply} target='_blank' className={Styles.button}>Apply Now</Link>
       </div>
       <p>{detailData.description}</p>
-      <h4>Requirements</h4>
+      <h3>Requirements</h3>
       <p>{detailData.requirements.content}</p>
       <ul>{detailData.requirements.items.map(item => (
-        <li>
+        <li key={item}>
           {item}
         </li>
       ))}</ul>
-      <h4>What you will do</h4>
+      <h3>What you will do</h3>
       <p>{detailData.role.content}</p>
       <ol>{detailData.role.items.map(item => (
-        <li>
+        <li key={item}>
           {item}
         </li>
       ))}</ol>
-    </div>
+    </section>
+    </>
   )
 }
 export default Detail
