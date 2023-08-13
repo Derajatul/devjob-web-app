@@ -1,14 +1,57 @@
 .container{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 100%;
   background-color: white;
+  padding: 30px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 10px;
 }
-.logoBackground{
+.container h4{
+  color: #5964e0;
+}
+
+/* Untuk tampilan desktop */
+@media (min-width: 1024px) {
+    .container{
+      width: 32%;
+    }
+}
+
+/* Untuk tampilan tablet */
+@media (max-width: 1023px) and (min-width: 768px) {
+    .container{
+      width: 49%;
+    }
+}
+
+/* Untuk tampilan ponsel */
+@media (max-width: 767px) {
+    .container{
+      width: 100%;
+    }
+}
+.logoContainer{
   display: flex;
   justify-content:center;
   align-items: center;
   width:50px;
   height:50px;
   border-radius: 10px;
+  position: absolute;
+  top: -25px;
 }
-.imageLogo{
-  width: 100&;
+.jobPostingInfo{
+  display: flex;
+  width: 150px;
+  align-self: flex-end;
+  align-items: center;
+  justify-content: space-between;
+}
+.divider{
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background-color: black;
 }

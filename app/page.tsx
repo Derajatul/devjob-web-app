@@ -6,9 +6,11 @@ const Home = () => {
   
   return (
     <section>
-      {data.map(el => (
-        <Card logo={el.logo} logoBackground={el.logoBackground} postedAt={el.postedAt} contract={el.contract} position={el.position} company={el.company} location={el.location} />
+      <div className={Styles.cardContainer}>
+        {data.map(el => (
+        <Card key={el.id} logo={el.logo} logoBackground={el.logoBackground} postedAt={el.postedAt} contract={el.contract} position={el.position} company={el.company} location={el.location} />
       ))}
+      </div>
     </section>
   );
 };
