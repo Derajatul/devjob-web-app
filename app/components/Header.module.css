@@ -7,13 +7,34 @@
     padding: 0 10% 0 10%;
     justify-content: space-between;
 }
+.background {
+  background-image: url('../assets/mobile/bg-pattern-header.svg');
+  background-size: cover;
+  height: 10rem;
+  width: 100%;
+  position: absolute;
+  top:0;
+  left: 0;
+  background-repeat: no-repeat;        
+}
 
-/* Untuk tampilan desktop */
+@media (min-width: 768px) {
+    .background {
+        background-image: url('../assets/tablet/bg-pattern-header .svg');
+        background-size: cover;
+        height: 10rem;
+        width: 100%;
+        position: absolute;
+        top:0;
+        left: 0;
+        background-repeat: no-repeat;
+    }
+}
 @media (min-width: 1024px) {
     .background {
         background-image: url('../assets/desktop/bg-pattern-header.svg');
-        background-size: cover; /* Atur ukuran latar belakang */
-        height: 10rem; /* Atur ketinggian */
+        background-size: cover;
+        height: 10rem; 
         width: 100%;
         position: absolute;
         top:0;
@@ -22,92 +43,3 @@
     }
 }
 
-/* Untuk tampilan tablet */
-@media (max-width: 1023px) and (min-width: 768px) {
-    .background {
-        background-image: url('../assets/tablet/bg-pattern-header .svg');
-        background-size: cover; /* Atur ukuran latar belakang */
-        height: 10rem; /* Atur ketinggian */
-        width: 100%;
-        position: absolute;
-        top:0;
-        left: 0;
-        background-repeat: no-repeat;
-    }
-}
-
-/* Untuk tampilan ponsel */
-@media (max-width: 767px) {
-    .background {
-        background-image: url('../assets/mobile/bg-pattern-header.svg');
-        background-size: cover; /* Atur ukuran latar belakang */
-        height: 10rem; /* Atur ketinggian */
-        width: 100%;
-        position: absolute;
-        top:0;
-        left: 0;
-        background-repeat: no-repeat;
-        
-    }
-}
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.switch span {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.switch span:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.switch input:checked + .switch span {
-  background-color: #2196F3;
-}
-
-.switch input:focus + .switch span {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-.switch input:checked + .switch span:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.switch span {
-  border-radius: 34px;
-}
-
-.switch span:before {
-  border-radius: 50%;
-}
