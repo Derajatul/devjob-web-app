@@ -2,17 +2,12 @@
   --background: #f4f6f8;
   --backgroundCard: #ffffff;
   --backgroundButton1: #eeeffc
-  --backgroundPrimaryButton: #5964e0;
-  --textPrimaryButton: #ffffff;
 }
 
 [data-theme='dark'] {
   --background: #121721;
   --backgroundCard: #19202d;
   --backgroundButton1: #303642;
-  --backgroundPrimaryButton: #5964e0;
-  --textPrimaryButton: #ffffff;
-  
 }
 
 html,

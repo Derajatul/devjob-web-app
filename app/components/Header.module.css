@@ -8,7 +8,7 @@
     justify-content: space-between;
 }
 .background {
-  background-image: url('../assets/mobile/bg-pattern-header.svg');
+  background-image: url('/mobile/bg-pattern-header.svg');
   background-size: cover;
   height: 10rem;
   width: 100%;
@@ -28,7 +28,7 @@
 
 @media (min-width: 768px) {
     .background {
-        background-image: url('../assets/tablet/bg-pattern-header .svg');
+        background-image: url('/tablet/bg-pattern-header .svg');
         background-size: cover;
         height: 10rem;
         width: 100%;
@@ -40,7 +40,7 @@
 }
 @media (min-width: 1024px) {
     .background {
-        background-image: url('../assets/desktop/bg-pattern-header.svg');
+        background-image: url('/desktop/bg-pattern-header.svg');
         background-size: cover;
         height: 10rem; 
         width: 100%;
