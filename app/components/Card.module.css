@@ -8,6 +8,9 @@
   position: relative;
   border-radius: 10px;
 }
+.container:hover{
+  opacity: 0.8;
+}
 .container h4{
   color: #5964e0;
 }

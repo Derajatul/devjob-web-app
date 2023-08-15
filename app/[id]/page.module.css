@@ -1,8 +1,9 @@
-.container{
+.main{
   padding: 5%;
   background-color: var(--backgroundCard);
   max-width: 800px;
   margin-bottom: 25px;
+  border-radius: 10px;
 }
 
 .jobPostingInfo{
@@ -36,6 +37,7 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
+  border-radius: 10px;
   }
 
 .logoContainer{
@@ -49,7 +51,7 @@
   top: -25px;
 }
 
-.headContainer{
+.header{
   padding: 5%;
   background-color: var(--backgroundCard);
   max-width: 800px;
@@ -58,6 +60,10 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border-radius: 10px;
+}
+.desktopHeader{
+  display: none;
 }
 .logo{
   width: 50px;
@@ -72,13 +78,98 @@
 
 .buttonHeader{
   color: #5964e0;
-  background-color:#eeeffc;
+  background-color:var(--backgroundButton1);
   padding: 10px 20px;
+  border-radius: 10px;
 }
 
+.footer{
+  padding: 5%;
+  background-color: var(--backgroundCard);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px 10px 0 0;
+}
+.footer div{
+  display: none;
+}
+.footer a{
+  background-color: #5964e0;
+  width:95%;
+  text-align:center;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+
 @media (min-width: 768px) {
-    .jobDetails{
-        align-items: center;
-        flex-direction: row;
-    }
+  .header{
+    display: none;
+  }
+  .desktopHeader{
+    padding: 5%;
+    background-color: var(--backgroundCard);
+    max-width: 800px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .desktopHeader div{
+    display: flex;
+    justify-content: center;
+  }
+  .companyWebsite{
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+  }
+  .companyWebsite h2{
+    margin: 0;
+  }
+  .companyWebsite p{
+    margin: 0;
+  }
+  .desktopLogoBackground{
+    height: 80px;
+    width: 80px;
+    transform: scale(2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+  
+  .jobDetails{
+    align-items: center;
+    flex-direction: row;
+  }
+  .footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .footer div h3{
+    margin:0;
+  }
+  .footer div p{
+    margin: 0;
+  }
+  .footer a{
+    width: 150px;
+  }
 }

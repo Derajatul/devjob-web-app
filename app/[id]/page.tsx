@@ -7,15 +7,30 @@ const Detail = ({ params }) => {
   const detailData = filteredData[0]
   return(
     <div>
-      <section className={Styles.headContainer}>
+      {/* Mobile header */}
+      <section className={Styles.header}>
         <div className={Styles.logo} style={{backgroundColor: detailData.logoBackground}}>
           <img src={detailData.logo} />
         </div>
         <h2>{detailData.company}</h2>
-        <Link href={detailData.website}>Company Site</Link>
+        <Link href={detailData.website} className={Styles.buttonHeader}>Company Site</Link>
+      </section>
+
+      {/* Desktop header */}
+      <section className={Styles.desktopHeader}>
+        <div>
+          <div style={{backgroundColor: detailData.logoBackground}} className={Styles.desktopLogoBackground}>
+            <img src={detailData.logo} />
+          </div>
+          <div className={Styles.companyWebsite}>
+            <h2>{detailData.company}</h2>
+            <p>{detailData.website}</p>
+          </div>
+        </div>
+        <Link className={Styles.buttonHeader} href={detailData.website}>Company Site</Link>
       </section>
       
-      <section className={Styles.container}>
+      <section className={Styles.main}>
       <div className={Styles.jobPostingInfo}>
         <p>{detailData.postedAt}</p>
         <span className={Styles.divider}></span>
@@ -43,6 +58,14 @@ const Detail = ({ params }) => {
           {item}
         </li>
       ))}</ol>
+    </section>
+
+    <section className={Styles.footer}>
+      <div>
+        <h3>{detailData.position}</h3>
+        <p>{detailData.company}</p>
+      </div>
+      <Link href={detailData.apply}>Apply Now</Link>
     </section>
     </div>
   )

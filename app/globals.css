@@ -1,14 +1,18 @@
 :root {
-  /* Your default theme */
   --background: #f4f6f8;
   --backgroundCard: #ffffff;
-  --foreground: black;
+  --backgroundButton1: #eeeffc
+  --backgroundPrimaryButton: #5964e0;
+  --textPrimaryButton: #ffffff;
 }
 
 [data-theme='dark'] {
   --background: #121721;
   --backgroundCard: #19202d;
-  --foreground: white;
+  --backgroundButton1: #303642;
+  --backgroundPrimaryButton: #5964e0;
+  --textPrimaryButton: #ffffff;
+  
 }
 
 html,
@@ -22,10 +26,15 @@ a {
   text-decoration: none;
 }
 p,li{
-  color: #636363;
+  color: #7f7f7f;
 }
 
-
+button:hover{
+  opacity: 0.7;
+}
+a:hover{
+  opacity: 0.7;
+}
 * {
   /* margin: 0; */
   /* padding: 0; */
