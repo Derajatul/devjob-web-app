@@ -27,11 +27,11 @@ const SearchBar = () => {
       <form className={Styles.containerDesktop}>
           <label className={Styles.formGroup}>
               <img src='/icons/icon-search-desktop.svg' alt='' />
-            <input id='search' type='text' placeHolder="Filter by title..." />
+            <input id='search' type='text' placeholder="Filter by title..." />
           </label>
           <label className={Styles.formGroup}>
             <img src='/icons/icon-location.svg' alt='' />
-            <input id='location' type='text' placeHolder="Filter by location..." />
+            <input id='location' type='text' placeholder="Filter by location..." />
           </label>
           <div className={Styles.formGroup}>
             <label>

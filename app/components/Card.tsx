@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const Card = ({ onHref,company,logo,logoBackground,position,postedAt,contract,location}) => {
   return(
-    <Link href={onHref ? onHref : '/'} className={Styles.container}>
+    <Link href={onHref ? onHref : '/'} className={Styles.container} target="_blank" >
       <div className={Styles.logoContainer} style={{backgroundColor: logoBackground}}>
         <img src={logo} alt={`${company} logo`} />
       </div>

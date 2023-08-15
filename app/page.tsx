@@ -5,6 +5,7 @@ import SearchBar from './components/SearchBar'
 
 const Home = () => {
   return (
+    <>
     <section>
       <SearchBar />
       <div className={Styles.cardContainer}>
@@ -13,6 +14,7 @@ const Home = () => {
       ))}
       </div>
     </section>
+    </>
   );
 };
 

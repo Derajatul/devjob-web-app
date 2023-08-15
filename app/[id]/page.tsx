@@ -6,9 +6,16 @@ const Detail = ({ params }) => {
    const filteredData = data.filter(el => el.id == params.id);
   const detailData = filteredData[0]
   return(
-    <>
+    <div>
+      <section className={Styles.headContainer}>
+        <div className={Styles.logo} style={{backgroundColor: detailData.logoBackground}}>
+          <img src={detailData.logo} />
+        </div>
+        <h2>{detailData.company}</h2>
+        <Link href={detailData.website}>Company Site</Link>
+      </section>
+      
       <section className={Styles.container}>
-      <Link href='/'>&larr; Back to home</Link>
       <div className={Styles.jobPostingInfo}>
         <p>{detailData.postedAt}</p>
         <span className={Styles.divider}></span>
@@ -37,7 +44,7 @@ const Detail = ({ params }) => {
         </li>
       ))}</ol>
     </section>
-    </>
+    </div>
   )
 }
 export default Detail

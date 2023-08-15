@@ -17,6 +17,14 @@
   left: 0;
   background-repeat: no-repeat;        
 }
+.theme{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.theme img {
+  margin: 8px;
+}
 
 @media (min-width: 768px) {
     .background {
