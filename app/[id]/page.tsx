@@ -1,8 +1,15 @@
 import data from '../data.json';
 import Link from 'next/link'
 import Styles from './page.module.css'
+import Image from 'next/image'
 
-const Detail = ({ params }) => {
+interface DetailProps {
+  params: {
+    id: number;
+  };
+}
+
+const Detail = ({ params }: DetailProps) => {
    const filteredData = data.filter(el => el.id == params.id);
   const detailData = filteredData[0]
   return(
@@ -31,6 +38,7 @@ const Detail = ({ params }) => {
       </section>
       
       <section className={Styles.main}>
+      <Link href="/">&larr; back to home</Link>
       <div className={Styles.jobPostingInfo}>
         <p>{detailData.postedAt}</p>
         <span className={Styles.divider}></span>

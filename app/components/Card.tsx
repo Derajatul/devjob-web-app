@@ -1,9 +1,30 @@
 import Styles from './Card.module.css'
 import Link from 'next/link'
 
-const Card = ({ onHref,company,logo,logoBackground,position,postedAt,contract,location}) => {
+
+interface CardProps {
+  onHref?: string;
+  company: string;
+  logo: string;
+  logoBackground: string;
+  position: string;
+  postedAt: string;
+  contract: string;
+  location: string;
+}
+
+const Card = ({
+  onHref = '/',
+  company,
+  logo,
+  logoBackground,
+  position,
+  postedAt,
+  contract,
+  location,
+}: CardProps) => {
   return(
-    <Link href={onHref ? onHref : '/'} className={Styles.container} target="_blank" >
+    <Link href={onHref ? onHref : '/'} className={Styles.container} >
       <div className={Styles.logoContainer} style={{backgroundColor: logoBackground}}>
         <img src={logo} alt={`${company} logo`} />
       </div>
