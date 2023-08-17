@@ -44,6 +44,7 @@
   border-radius: 10px;
   position: absolute;
   top: -25px;
+  padding: 5px;
 }
 .jobPostingInfo{
   display: flex;

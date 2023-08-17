@@ -66,6 +66,7 @@
   display: none;
 }
 .logo{
+  padding: 5px;
   width: 50px;
   height: 50px;
   display: flex;
@@ -141,6 +142,7 @@
   }
   .desktopLogoBackground{
     height: 80px;
+    padding: 10px;
     width: 80px;
     transform: scale(2);
     display: flex;

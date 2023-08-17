@@ -17,7 +17,9 @@ const Detail = ({ params }: DetailProps) => {
       {/* Mobile header */}
       <section className={Styles.header}>
         <div className={Styles.logo} style={{backgroundColor: detailData.logoBackground}}>
-          <img src={detailData.logo} />
+          <Image src={detailData.logo} layout="responsive"
+  width={100} 
+  height={100} />
         </div>
         <h2>{detailData.company}</h2>
         <Link href={detailData.website} className={Styles.buttonHeader}>Company Site</Link>
@@ -27,7 +29,9 @@ const Detail = ({ params }: DetailProps) => {
       <section className={Styles.desktopHeader}>
         <div>
           <div style={{backgroundColor: detailData.logoBackground}} className={Styles.desktopLogoBackground}>
-            <img src={detailData.logo} />
+            <Image src={detailData.logo} layout="responsive"
+  width={80} 
+  height={100} />
           </div>
           <div className={Styles.companyWebsite}>
             <h2>{detailData.company}</h2>

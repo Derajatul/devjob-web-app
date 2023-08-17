@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Styles from './SearchBar.module.css';
+import Image from 'next/image'
 
 interface SearchBarProps {
   onSearch: (searchParams: {
@@ -17,11 +18,11 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
   const [fullTimeChecked, setFullTimeChecked] = useState(false);
 
 
-  const handleSearchChange = (event) => {
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
   };
 
-  const handleLocationChange = (event) => {
+  const handleLocationChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchLocation(event.target.value);
   };
 
@@ -29,7 +30,7 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
     setFullTimeChecked(!fullTimeChecked);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
     const searchParams = {
       term: searchTerm,
@@ -58,23 +59,23 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
             <span id="close" onClick={handleCloseModal}>&times;</span>
             <div>
               <label>
-              <img src="/icons/icon-location.svg" />
+              <Image width={25} height={25} layout='responsive' alt='' src="/icons/icon-location.svg" />
               </label>
               <input type='text' placeholder="Filter by location..."  value={searchLocation}
               onChange={handleLocationChange}/>
               <button className={Styles.searchButton}>
-                <img src="/icons/icon-search.svg" alt='' />
+                <Image width={25} height={25} layout="responsive" src="/icons/icon-search.svg" alt='' />
               </button>
             </div>
           </div>
         </div>
         <div className={Styles.buttons} onClick={handleModal}>
           <button>
-            <img src="/icons/icon-filter.svg" alt='' />
+            <Image width={20} height={20} src="/icons/icon-filter.svg" alt='' />
           </button>
           
           <button className={Styles.searchButton}>
-            <img src="/icons/icon-search.svg" alt='' />
+            <Image width={27} height={27} src="/icons/icon-search.svg" alt='' />
           </button>
         </div>
       </form>
@@ -82,12 +83,12 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
       {/* Searchbar desktop */}
       <form className={Styles.containerDesktop} onSubmit={handleSubmit}>
           <label className={Styles.formGroup}>
-            <img src='/icons/icon-search-desktop.svg' alt='' />
+            <Image width={65} height={65}  src='/icons/icon-search-desktop.svg' alt='' />
             <input id='search' type='text' placeholder="Filter by title..."  value={searchTerm}
           onChange={handleSearchChange}/>
           </label>
           <label className={Styles.formGroup}>
-            <img src='/icons/icon-location.svg' alt='' />
+            <Image width={58} height={65} src='/icons/icon-location.svg' alt='' />
             <input id='location' type='text' placeholder="Filter by location..." value={searchLocation}
             onChange={handleLocationChange} />
           </label>

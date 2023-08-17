@@ -1,6 +1,6 @@
 import Styles from './Card.module.css'
 import Link from 'next/link'
-
+import Image from 'next/image'
 
 interface CardProps {
   onHref?: string;
@@ -26,7 +26,9 @@ const Card = ({
   return(
     <Link href={onHref ? onHref : '/'} className={Styles.container} >
       <div className={Styles.logoContainer} style={{backgroundColor: logoBackground}}>
-        <img src={logo} alt={`${company} logo`} />
+        <Image src={logo} alt={`${company} logo`} layout="responsive"
+  width={100}
+  height={100} />
       </div>
       <div className={Styles.jobPostingInfo}>
         <p>{postedAt}</p>
