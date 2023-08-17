@@ -30,7 +30,7 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
     setFullTimeChecked(!fullTimeChecked);
   };
 
-  const handleSubmit = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const searchParams = {
       term: searchTerm,
