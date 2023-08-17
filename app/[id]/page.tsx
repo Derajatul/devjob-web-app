@@ -2,6 +2,8 @@ import data from '../data.json';
 import Link from 'next/link'
 import Styles from './page.module.css'
 import Image from 'next/image'
+import { Suspense } from 'react'
+import Loading from './loading'
 
 interface DetailProps {
   params: {
@@ -13,6 +15,7 @@ const Detail = ({ params }: DetailProps) => {
    const filteredData = data.filter(el => el.id == params.id);
   const detailData = filteredData[0]
   return(
+    <Suspense fallback={<Loading />}>
     <div>
       {/* Mobile header */}
       <section className={Styles.header}>
@@ -80,6 +83,8 @@ const Detail = ({ params }: DetailProps) => {
       <Link href={detailData.apply}>Apply Now</Link>
     </section>
     </div>
+    </Suspense>
+    
   )
 }
 export default Detail
