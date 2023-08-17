@@ -42,11 +42,15 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
 
   const handleModal = () => {
     const modal = document.getElementById('modal')
-    modal.style.display = 'block'
+    if (modal) {
+    modal.style.display = 'block';
+  }
   };
   const handleCloseModal = () => {
     const modal = document.getElementById('modal')
-    modal.style.display = 'none'
+    if (modal) {
+    modal.style.display = 'none';
+  }
   }
   return(  
     <section>
