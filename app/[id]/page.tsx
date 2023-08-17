@@ -19,7 +19,7 @@ const Detail = ({ params }: DetailProps) => {
         <div className={Styles.logo} style={{backgroundColor: detailData.logoBackground}}>
           <Image src={detailData.logo} layout="responsive"
   width={100} 
-  height={100} />
+  height={100} alt='' />
         </div>
         <h2>{detailData.company}</h2>
         <Link href={detailData.website} className={Styles.buttonHeader}>Company Site</Link>
@@ -31,7 +31,7 @@ const Detail = ({ params }: DetailProps) => {
           <div style={{backgroundColor: detailData.logoBackground}} className={Styles.desktopLogoBackground}>
             <Image src={detailData.logo} layout="responsive"
   width={80} 
-  height={100} />
+  height={100} alt='' />
           </div>
           <div className={Styles.companyWebsite}>
             <h2>{detailData.company}</h2>
